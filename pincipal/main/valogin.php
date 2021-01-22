@@ -1,9 +1,9 @@
 <?php
 $erroremail = $errorpass = $errorusuar = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-if (!empty($_POST['correo'])){
-   if (filter_var($_POST['correo'], FILTER_VALIDATE_EMAIL)){
-   	$email = $_POST['correo'];
+if (!empty($_POST['usuario'])){
+   if (filter_var($_POST['usuario'])){
+   	$email = $_POST['usuario'];
 
    }else{
    	  $erroremail = "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
@@ -23,8 +23,8 @@ if (!empty($_POST['correo'])){
    }
 
 
-if(!empty($_POST['pass'])){
-	$passw = $_POST['pass'];
+if(!empty($_POST['password'])) {
+	$passw = (md5($_POST['password']));
 }else{
 	$errorpass = "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                                <strong>Falta ingresar el password.</strong> Por favor ingresa con el password con el que te registraste.
@@ -39,7 +39,7 @@ if(!empty($email) && !empty($passw)){
 
 //consultar los datos existentes
 	include 'conexion.php';
-    $consulta = "SELECT * FROM alumnos WHERE Correo_U = '$email' and Password ='$passw'";
+    $consulta = "SELECT * FROM alumnos WHERE Usuario = '$email' and Password ='$passw'";
     $ejecutar = mysqli_query($conexion, $consulta);
 
 //busqueda de valor de la columna selcionada
@@ -51,7 +51,7 @@ if(!empty($email) && !empty($passw)){
     if(mysqli_num_rows($ejecutar)>0){
         session_start();
        $_SESSION['usuario'] = $email;
-       header ("location: pincipal/principal.php");
+       header ("location: ../principal.php");
     }else{
 
     	$errorusuar = "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>

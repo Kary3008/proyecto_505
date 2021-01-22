@@ -69,7 +69,7 @@
   </div>
 </div>
 
-    <div class="container py-4">
+    <div class="container py-2">
           <div class="row" id="Servicios">
             <div class="col-lg-12" data-aos="fade-up">
                 <h3 class="text text-center"> </h3>
@@ -84,7 +84,7 @@
                  <div class="card-header bg-header-card text text-center">
                   SALON
                  </div>
-                 <a href="#"><img src="img/PROTOTIPO(1).png" class="card-img-top Inicio-img" alt="INGRESO"></a>
+                 <a href="Demo(1).html"><img src="img/PROTOTIPO(1).png" class="card-img-top Inicio-img" alt="INGRESO"></a>
               </div>
            </div>
             <!-- termina primera card-->
@@ -108,9 +108,7 @@
       </div>
     </div>
 <!-- termina seccion presentacion -->
-    <div class="container" data-aos="fade-up">
-       <p class="text text-center"><a href="Demo(1).html" class="text-muted">DEMO(1)</a></p>
-        <p class="text text-center"><a href="Demo(2).html" class="text-muted">DEMO(2)</a></p>
+    <div class="container" data-aos="fade-up">+
     </div>
   </div>
     </div>
@@ -118,6 +116,7 @@
     <!-- inicia jumbotron -->
       <div class="jumbotron jumbo">
          <div class="container" id="Somos">
+           <img src=" " alt="">
             <div class="row">
                <div class="col-sm-6 btn-holder"></div>
                   <div class="col-sm-6">
