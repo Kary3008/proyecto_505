@@ -38,7 +38,7 @@
   // validacion de el criterio de aceptacion
   if($new->num_rows > 0){
     $mensaje.="<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
-                  <strong>El usuario y/o Email ya existe</strong> El registro ya existe en la base de datos por favor <a href='../LOGIN/Login.php'>Click para iniciar sesion</a> .
+                  <strong>El usuario y/o Email ya existe</strong> El registro ya existe en la base de datos por favor <a href='../pincipal/session.php'>Click para iniciar sesion</a> .
                   <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                      <span aria-hidden='true'>&times;</span>
                   </button>
@@ -46,13 +46,13 @@
   }
   else {
     $reg = "INSERT INTO alumnos(Nombre_A, ApellidoP_A, ApellidoM_A, Fecha_Nac, Usuario, Correo_U, Password, Id_Tusuario, Id_Genero, Id_Grupo, Id_Carrera, Id_Plantel)
-    VALUES('$nombre','$apellidop','$apellidom','$f_nac', '$usern', '$email', '$passw','$gen', '$grupo','$carrera','$plantel')";
+    VALUES('$nombre','$apellidop','$apellidom','$f_nac', '$usern', '$email', '$passw','$t_usuario','$gen', '$grupo','$carrera','$plantel')";
     $registro = $conecta->query($reg);
 
   // verificamos que el registro sea valido para mandar una alerta
    if ($registro > 0) {
      $mensaje.="<div class='alert alert-success alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
-                   <strong>Registro Exitoso</strong> Ya puedes iniciar sesión <a href='../LOGIN/Login.php' class='text-muted text-decoration-none'>Click para iniciar sesion</a> .
+                   <strong>Registro Exitoso</strong> Ya puedes iniciar sesión <a href='../pincipal/session.php' class='text-muted text-decoration-none'>Click para iniciar sesion</a> .
                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
                       <span aria-hidden='true'>&times;</span>
                    </button>
@@ -175,11 +175,12 @@
                                  </select>
                                </div>
                            </div>
+                           <a href="../login/politicas(demo).php " class="text-muted text-decoration-none">Leer políticas de privacidad</label></a>
                            <div class="row py-1">
                               <div class="col">
                                  <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" name="checkbox" id="checkbox" onclick="habilitar();">
-                                    <label for="checkbox" class="custom-control-label"><a href="#" class="text-muted text-decoration-none" data-toggle="modal" data-target="#staticBackdrop">Acepto Terminos y Condiciones</label></a>
+                                    <label for="checkbox" class="custom-control-label"><a href="../login/politicas(demo).php " class="text-muted text-decoration-none" data-toggle="modal" data-target="#staticBackdrop">Acepto Terminos y Condiciones</label></a>
                                  </div>
                               </div>
                            </div>

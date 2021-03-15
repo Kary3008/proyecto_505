@@ -18,12 +18,12 @@ if (!isset($usuario)) {
     <!--Inicia notificaciones-->
     <?php
       $notification= '<script>
-          Push.create("Hola, bienvenido.", {
-                body: "Visita mi cuenta en GitHub.",
+          Push.create("Hola, bienvenid@.", {
+                body: "Conoce el futuro proyecto de la empresa BorderLine",
                 icon: "img/logo.png",
                 timeout: 6000,
                 onClick: function() {
-                  window.location="https://github.com/Kary3008";
+                  window.location="project.php";
                   this.close();
                 }
           });

@@ -20,7 +20,7 @@
                           <img src="img/dino.png" alt="Imagen de Perfil" style="width: 30px; height:30px; border-radius:50%; ">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="opciones">
-                          <a class="dropdown-item" href="main/perfil.php"><span class="icon-cog"></span>Perfil</a>
+                          <a class="dropdown-item" href="main/perfil1.php"><span class="icon-cog"></span>Perfil</a>
                           <a class="dropdown-item" href="#">Ayuda</a>
                           <a class="dropdown-item" href="main/cerrar.php">Cerrar sesión</a>
                         </div>

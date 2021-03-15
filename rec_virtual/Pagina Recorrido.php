@@ -20,7 +20,7 @@
      <!-- termina el preloader de la pagina web -->
     <!-- inicia el contenido de la web -->
      <div id="contenido">
-         <?php include '../menu.php' ?>
+         <?php include '../menu.php' ?> <!--Inserta navbar-->
 <!-- inicia slider -->
 <div id="carouselExampleCaptions" class="carousel slide slider" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -38,21 +38,14 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../img/map2.jpeg" class="d-block w-100" alt="...">
+      <img src="img/tres.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h2 class="text-center slider">¡BIENVENID@ AL RECORRIDO VIRTUAL!</h2>
           <p>"CONOCE TU INSTITUCIÓN"</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="../img/map3.jpeg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h2 class="text-center slider">¡BIENVENID@ AL RECORRIDO VIRTUAL!</h2>
-          <p>"CONOCE TU INSTITUCIÓN"</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="../img/map4.jpeg" class="d-block w-100" alt="...">
+      <img src="img/tres.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h2 class="text-center slider">¡BIENVENID@ AL RECORRIDO VIRTUAL!</h2>
           <p>"CONOCE TU INSTITUCIÓN"</p>
@@ -71,25 +64,6 @@
     <!-- flechas de slider -->
   </div>
 <!-- termina slider -->
-<!--
-<div style="background : #73c2fb;width: 18rem;" class="card" >
-  <img src="img/tres.jpg" class="card-img-top">
-  <div  class="card-body">
-    <p class="card-text"> en este recorrido podras conocer nuestro plantel de manera virtual.</p>
-  </div>
-</div>
-
-  <h1 align="center">¿En que consiste?</h1>
-     <h3>En este recorrido virtual se pretende que cel usuario conozca el plantel sin la necesidad de exponerse ante la enfermedad provocada por el virus del covid-19.</h3>
-</div>
-     </div>
-     <h5>Plantel</h5>
-     <p>El plantel a pesar de ser uno pequeño a comparacion de otros cuenta con los lavoratorios para que los alumnos realizen sus practicas al igual de tomar sus clases.</p>.00000
-  </div>-->
-  <!--  <h5>Plantel</h5>
-    <p>En el pantel naucalpan I contamos con bastantes actividades.</p>
-    <h5>Nuestro sistema</h5>
-    <p>En nuestro sistema contamos con muchas oportunidades para los nuevos y pequeños emprendedores.</p>-->
   <div class="container py-3">
     <div class="row">
       <div class="col aling-middle">
@@ -111,7 +85,7 @@
 <div class="card-header bg-header-card text-center">
    Recorrido Virtual.
 </div>
-<a href="../REGISTRO/Registro.php"><img src="../img/recVirtual.png" class="card-img-top" alt="Recorrido virtual2"></a>
+<a href="../REGISTRO/Registro.php"><img src="../pincipal/img/recVirtual.png" class="card-img-top" alt="Recorrido virtual2"></a>
 <div class="card-body">
  <p class="card-text text-justify">Registrate para seguir recorriendo más tour virtuales.</p>
 </div>
@@ -124,9 +98,9 @@
 <div class="card-header bg-header-card text-center">
    Conocenos.
 </div>
-<a href="#"><img src="../img/desarrollo.png" class="card-img-top" alt="Recorrido virtual3"></a>
+<a href="#"><img src="../pincipal/img/desarrollo.png" class="card-img-top" alt="Recorrido virtual3"></a>
 <div class="card-body">
- <p class="card-text text-justify">Conoce el porque de este proyecto.</p>
+ <p class="card-text text-justify">Conoce el por qué de este proyecto.</p>
 </div>
 </div>
 <!--termina tercera card-->

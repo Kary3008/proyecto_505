@@ -1,6 +1,7 @@
 <?php
 //se incluye la base de datos
 include 'main/conecta.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
