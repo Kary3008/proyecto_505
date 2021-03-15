@@ -1,3 +1,19 @@
+<?php
+  session_start();
+  include 'main/conecta.php';
+  $usuario = $_SESSION['Usuario'];
+  if(!isset($usuario)){
+    header("location:../session.php");
+  }
+  //consulta para extraer datos de Perfil
+  $q = "SELECT * FROM alumnos WHERE Usuario ='".$usuario."'";
+  $cons = $conecta->query($q);
+  $perfil = $cons->fetch_array();
+  if ($perfil > 0){
+    $usu1 = $perfil;
+  }
+  $conecta->close();
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,25 +30,17 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="col-md-auto">
-              <nav aria-label="breadcrumb">
-          <ol class="breadcrumb" style="background-color: rgb(255, 255, 255); opacity: 0.3;">
-            <li class="breadcrumb-item"><a href="../principal.php">Inicio</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Perfil de Usuario</li>
-          </ol>
-        </nav>
-        </div>
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                   <ul class="navbar-nav ml-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link" style="color: #ddd" href="../principal.php">Inicio <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" style="color: #ddd" href="#">Conocenos</a>
-                      </li>
-                      <li class="nav-item active" style="list-style: none">
-                        <a class="nav-link disabled" style="color: #ddd"  href="#" tabindex="-1" aria-disabled="true">Bienvenid@</a>
-                      </li>
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb" style="background-color: rgb(255, 255, 255); opacity: 0.3;">
+                        <li class="breadcrumb-item"><a href="../principal.php">Inicio</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Perfil de Usuario</li>
+                      </ol>
+                    </nav>
+                    <li class="nav-item active" style="list-style: none">
+                       <a class="nav-link disabled" style="color: #ddd"  href="#" tabindex="-1" aria-disabled="true">Bienvenid@ <?php echo $_SESSION['Usuario'] ?></a>
+                     </li>
                       <!--Inicia lista despegable-->
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle text-white" href="#" id="opciones" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,7 +60,6 @@
 <br>
 <br>
         <h1 class="text-center">Perfil de Usuario</h1>
-        <!---->
         <!--Inicia contenido-->
         <div class="container" style="margin-top: 50px; background: #ccccff" >
         <div class="container">
