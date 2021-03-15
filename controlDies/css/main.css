@@ -1,7 +1,7 @@
 html, body { /*Toma los elementos de hmtl y body*/
   margin: 0;/*margen de 0pixels*/
   height: 100%;/*Altura del 100%*/
-  background-color: #444; /*fondo de la página*/
+  background-color: #fff; /*fondo de la página*/
 }
 
 /*.navbar li a, .navbar .navbar-brand{
@@ -50,11 +50,21 @@ html, body { /*Toma los elementos de hmtl y body*/
 
 .card-img-top {
   width: 100%;
-  height: 500px !important; //esta es la parte importante para que todas tus card-img tengan la misma medida sin importar el tamaño de la imagen
+  height: 250px !important; /*esta es la parte importante para que todas tus card-img
+  tengan la misma medida sin importar el tamaño de la imagen*/
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
 .logo{
   width: 100%;
   height: 50px
+}
+
+.jumbo{
+  background: url('img/posibles img/img3.png')top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 1em;
+  padding-top: 10em;
+  padding-bottom: 3em;
 }
