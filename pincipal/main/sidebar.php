@@ -13,7 +13,7 @@
       <a href="#" class="list-group-item list-group-item-action" style="background: #666699; color: #ccc;"><span class="icon-pencil"></span> Operaciones en contenido</a>
       <a href="../rec_virtual/Pagina Recorrido.php" class="list-group-item list-group-item-action" style="background: #666699; color: #ccc;"><span class="icon-desktop"></span> Recorrido Virtual</a>
       <a href="../videojuegos/PaginaVideoJuegos.php" class="list-group-item list-group-item-action" style="background: #666699; color: #ccc;"><span class="icon-paper-plane"></span> Videojuegos</a>
-      <a href="../controlDies/Pagina ControlDies.php" class="list-group-item list-group-item-action" style="background: #666699; color: #ccc;"><span class="icon-graduation-cap"></span> Control de DIES</a>
+      <a href="../controlDies/ControlDies.php" class="list-group-item list-group-item-action" style="background: #666699; color: #ccc;"><span class="icon-graduation-cap"></span> Control de DIES</a>
       <a href="#" class="list-group-item list-group-item-action" style="background: #666699; color: #ccc;"><span class="icon-lock"></span> Permiso</a>
       <a href="Notificaciones.php" class="list-group-item list-group-item-action" style="background: #666699; color: #ccc;"><span class="icon-help"></span> Ayuda</a>
     </div>

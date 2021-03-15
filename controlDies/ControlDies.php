@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/preloader.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="js\jquery-3.5.1.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
     <title>BorderLine | Control de Dies</title>
 </head>
 <body>
@@ -205,9 +205,11 @@
  <!-- termina Acordeon -->
  <!--inicia parallax -->
  <section id="parallax">
-  <div class="jumbotron parallax">
+  <div class="jumbotron parallax" style="width: 100%;
+  background-image: url('img/extra/img7.png'); background-attachment: fixed; background-position: center;
+  background-repeat: no-repeat; background-size: cover;">
       <div class="container-lg">
-           <h3 class="text-center text-dark" data-aos="fade-up">Ventas y Usuarios Conectados</h3>
+           <h3 class="text-center text-light" data-aos="fade-up">Ventas y Usuarios Conectados</h3>
       </div>
       <div class="container text-center">
            <div class="row py-4">
@@ -215,21 +217,21 @@
                <div class="col-sm align-middle" data-aos="fade-down">
                    <img src="img/icono3.png" alt="iconos">
                    <div class="counter"> + 1000</div>
-                   <p class="text-dark parrafo">Usuarios</p>
+                   <p class="text-light parrafo">Usuarios</p>
                </div>
                <!-- terminamos caja de iconos -->
                <!-- caja de iconos -->
                <div class="col-sm align-middle" data-aos="fade-down">
                    <img src="img/icono4.png" alt="iconos">
                    <div class="counter"> + 5000</div>
-                   <p class="text-dark parrafo">Ventas</p>
+                   <p class="text-light parrafo">Ventas</p>
                </div>
                <!-- terminamos caja de iconos -->
                <!-- caja de iconos -->
                <div class="col-sm align-middle" data-aos="fade-down">
                    <img src="img/icono5.png" alt="iconos">
                    <div class="counter"> + 10</div>
-                   <p class="text-dark parrafo">Proyectos Nuevos</p>
+                   <p class="text-light parrafo">Proyectos Nuevos</p>
                </div>
                <!-- terminamos caja de iconos -->
            </div>
