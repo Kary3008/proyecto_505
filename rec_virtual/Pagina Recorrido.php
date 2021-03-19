@@ -1,4 +1,7 @@
-<?php include 'main/conecta.php'; ?>
+<?php include 'main/conecta.php';
+session_start();
+$usuario = $_SESSION['Usuario'];
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

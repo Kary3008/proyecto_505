@@ -27,7 +27,7 @@
                       <div class="dropdown-menu" aria-labelledby="opciones">
                         <a class="dropdown-item" href="../pincipal/main/perfil1.php"><span class="icon-cog"></span>Perfil</a>
                         <a class="dropdown-item" href="#">Ayuda</a>
-                        <a class="dropdown-item" href="cerrar.php">Cerrar sesión</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCenter">Cerrar sesión</a>
                       </div>
                     </li>
                   <!--Termina lista despegable-->
@@ -35,3 +35,23 @@
           </div>
         </nav>
   <!--Termina navbar-->
+  <!--ventana modal cerrar sesion -->
+  <div class="modal" tabindex="-1" id="ModalCenter">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><span class="icon-off"></span> Cerrar Sesión </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>¿Deseas cerrar la sesión <?php echo $usuario; ?>?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <a href="cerrar.php" class="btn btn-danger">Cerrar Sesión</a>
+        </div>
+      </div>
+    </div>
+  </div>

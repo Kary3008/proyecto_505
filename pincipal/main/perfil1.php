@@ -1,18 +1,26 @@
 <?php
   session_start();
-  include 'main/conecta.php';
+  include 'conecta.php';
   $usuario = $_SESSION['Usuario'];
   if(!isset($usuario)){
-    header("location:../session.php");
-  }
-  //consulta para extraer datos de Perfil
-  $q = "SELECT * FROM alumnos WHERE Usuario ='".$usuario."'";
-  $cons = $conecta->query($q);
-  $perfil = $cons->fetch_array();
-  if ($perfil > 0){
-    $usu1 = $perfil;
-  }
-  $conecta->close();
+      header("location:../session.php");
+    }
+    //consulta para extraer datos de Perfil
+    $q = "SELECT * FROM alumnos WHERE Usuario ='".$usuario."'";
+    $cons = $conecta->query($q);
+    $perfil = $cons->fetch_array();
+    if ($perfil > 0){
+      $usu1 = $perfil;
+    }
+
+  $inner = "SELECT a.Id_Alumno, a.Nombre_A, a.ApellidoP_A, a.ApellidoM_A, a.Fecha_Nac, a.Usuario, a.Correo_U, a.Password, a.Id_Tusuario, a.Id_Genero, a.Id_Grupo, a.Id_Carrera, a.Id_Plantel,
+  g.Id_Genero, g.Nombre_G, c.Id_Carrera, c.Nombre_Carrera, c.Codigo_C, gr.Id_Grupo, gr.Grupo, gr.Id_Carrera,
+  p.Id_Plantel, p.Nombre_Plantel, p.Codigo_Plantel, p.Direccion, t.Id_Tusuario, t.Tipo FROM alumnos as a INNER JOIN genero as g ON a.Id_Genero = g.Id_Genero INNER JOIN carrera as c ON a.Id_Carrera = c.Id_Carrera
+  INNER JOIN grupos as gr ON a.Id_Grupo = gr.Id_Grupo INNER JOIN plantel as p ON a.Id_Plantel = p.Id_Plantel INNER JOIN tipousuario as t ON a.Id_Tusuario = t.Id_Tusuario WHERE Usuario = '".$usuario."'";
+  $join = $conecta->query($inner);
+  $imprimir = $join->fetch_array();
+
+    $conecta->close();
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -49,7 +57,7 @@
                           <div class="dropdown-menu" aria-labelledby="opciones">
                             <a class="dropdown-item" href="#"><span class="icon-cog"></span>Perfil</a>
                             <a class="dropdown-item" href="#">Ayuda</a>
-                            <a class="dropdown-item" href="cerrar.php">Cerrar sesión</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCenter">Cerrar sesión</a>
                           </div>
                         </li>
                       <!--Termina lista despegable-->
@@ -57,6 +65,27 @@
               </div>
             </nav>
       <!--Termina navbar-->
+      <!--ventana modal cerrar sesion -->
+      <div class="modal" tabindex="-1" id="ModalCenter">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"><span class="icon-off"></span> Cerrar Sesión </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>¿Deseas cerrar la sesión <?php echo $usuario; ?>?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <a href="cerrar.php" class="btn btn-danger">Cerrar Sesión</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Termina ventana modal-->
 <br>
 <br>
         <h1 class="text-center">Perfil de Usuario</h1>
@@ -72,7 +101,7 @@
             </div><hr>
             <!--Foto de perfil-->
             <!--Inicia Datos del usuario-->
-            <h3 class="text-center">Nombre, ApellidoP, ApellidoM</h3>
+            <h3 class="text-center">&nbsp;<?php echo $usu1['Nombre_A']; echo "&nbsp".$usu1['ApellidoP_A']; echo "&nbsp".$usu1['ApellidoM_A']; ?></h3>
             <div class="card">
               <div class="container">
                 <div class="container">
@@ -82,13 +111,13 @@
                           <div class="card-header text-light" style="background: #6666ff;"><span class="icon-tags"></span> Datos de Perfil</div>
                           <div class="card-body">
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item"><b><span class="icon-user"></span>Correo</li>
-                              <li class="list-group-item"><b><span class="#"></span> Fecha de Nacimiento:</li>
-                              <li class="list-group-item"><b><span class="icon"></span> Genero:</li>
-                              <li class="list-group-item"><b><span class="icon-sitemap"></span> Tipo de Usuario:</li>
-                              <li class="list-group-item"><b><span class="icon-map-signs"></span> Plantel:</li>
-                              <li class="list-group-item"><b><span class="icon-map-o"></span> Grupo:</li>
-                              <li class="list-group-item"><b><span class="icon-envelope"></span> Carrera:</li>
+                              <li class="list-group-item"><b><span class="icon-user"></span>Correo: <?php echo $usu1['Correo_U']; ?></li>
+                              <li class="list-group-item"><b><span class="#"></span> Fecha de Nacimiento: <?php echo $usu1['Fecha_Nac']; ?></li>
+                              <li class="list-group-item"><b><span class="icon"></span> Genero: <?php echo $imprimir['Nombre_G'] ?></li>
+                              <li class="list-group-item"><b><span class="icon-sitemap"></span> Tipo de Usuario: <?php echo $imprimir['Tipo'] ?></li>
+                              <li class="list-group-item"><b><span class="icon-map-signs"></span> Plantel: <?php echo $imprimir['Nombre_Plantel'] ?></li>
+                              <li class="list-group-item"><b><span class="icon-map-o"></span> Grupo: <?php echo $imprimir['Grupo'] ?></li>
+                              <li class="list-group-item"><b><span class="icon-envelope"></span> Carrera: <?php echo $imprimir['Nombre_Carrera'] ?></li>
                             </ul>
                           </div>
                     </div>
@@ -97,7 +126,7 @@
                     <div class="card shadow-lg p-3 mb-5 rounded">
                         <div class="card-header text-light" style="background: #6666ff;"><span class="icon-cogs"></span>¿Qué desea modificar?</div>
                         <div class="card-body">
-                           <h5 class="text-muted text-center">Nombre de Usuario : </h5><hr>
+                           <h5 class="text-muted text-center">Nombre de Usuario: <?php echo $usu1['Usuario']; ?></h5><hr>
                            <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar foto de perfil</a>
                            <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar nombre de usuario</a>
                            <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar correo electrónico</a>
