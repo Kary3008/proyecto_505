@@ -5,7 +5,22 @@ $usuario = $_SESSION['Usuario'];
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
+  <!-- meta tipos de caracteres especiales en la web -->
+  <meta charset="utf-8">
+  <!-- optimizar el sitio para moviles -->
+  <meta name="MobileOptimizer" content="width"/>
+  <!-- optimizacion para cualquier dispositivo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- descripción del sitio web -->
+  <meta name="description" content="Sistema online para ayuda y guía de estudiantes y futuros estudiantes, gestión del plantel a través de módulos como son:
+  registro de alumnos, reporte de alumnos, Recorrido Virtual de las áreas que conforman al plantel, Desarrollo de Juego Interactivos para el aprendizaje de las distintas carreras que ofrece la institución">
+  <!-- palabras claves para el seo -->
+  <meta name="keywords" content="Sistema Online, Videojuegos, Perfil de Usuario, Reportes de Asistencia, Recorrido Virtual, Juegos Interactivos, Guía de estudiantes, Conalep Naucalpan 1, Gestión de planteles, Carreras Técnicas">
+ <!-- meta para el autor del sitio  -->
+  <meta name="autor" content="Borderline">
+  <!-- el de la marca --->
+  <meta name="copyright" content="Borderline & Conactive">
+  <meta name="robots" content="index/">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fontello.css">
     <link rel="stylesheet" type="text/css" href="css/preloader.css">
