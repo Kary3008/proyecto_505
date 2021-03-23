@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 session_start();
 include 'conecta.php';
 include 'configreg.php';
@@ -60,8 +61,8 @@ $conecta->close();
                         <h2 class="text-center"><b>MODIFICA TUS DATOS</b></h2>
                       </div>
                       <div class="card-body">
-                        <h5 class="card-title">Nombre:&nbsp;<?php echo $usu['Nombre_A']; echo "&nbsp;".$usu['ApellidoP_A'];
-                         echo "&nbsp;".$usu['ApellidoM_A']; ?> </h5>
+                        <h5 class="card-title">Nombre:&nbsp;<?php echo $usu2['Nombre_A']; echo "&nbsp;".$usu2['ApellidoP_A'];
+                         echo "&nbsp;".$usu2['ApellidoM_A']; ?> </h5>
                         <!--Inicia formulario-->
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                             <div class="form">
