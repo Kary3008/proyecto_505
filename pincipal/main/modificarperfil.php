@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 session_start();
 include 'conecta.php';
 include 'configreg.php';
@@ -14,19 +14,13 @@ $con = "SELECT * FROM alumnos WHERE Usuario = '".$usuario."'";
 $consulta = $conecta->query($con);
 $mperfil = $consulta->fetch_array();
 if ($mperfil > 0) {
-  $usu2 = $mperfil;
+  $usu1 = $mperfil;
 }
-
-/*$consulta = $conecta->query($usuario1);
-$perfil = $consulta->fetch_array();
-if ($perfil > 0) {
-  $usu = $perfil;
-}*/
 
 //extraer los datos de el perfil
 $id = $_GET['Id_Alumno'];
-$mod = "SELECT * FROM alumnos WHERE Id_Alumno = '$id'";
-$modificar = $conecta->query($mod);
+$m = "SELECT * FROM alumnos WHERE Id_Alumno = '$id'";
+$modificar = $conecta->query($m);
 $row = $modificar->fetch_array(MYSQLI_ASSOC);
 
 //consulta para modificar los datos del Perfil
@@ -76,22 +70,22 @@ $conecta->close();
                         <h2 class="text-center"><b>MODIFICA TUS DATOS</b></h2>
                       </div>
                       <div class="card-body">
-                        <h5 class="card-title">Nombre:&nbsp;<?php echo $usu2['Nombre_A']; echo "&nbsp;".$usu2['ApellidoP_A'];
-                         echo "&nbsp;".$usu2['ApellidoM_A']; ?> </h5>
+                        <h5 class="card-title">Nombre:&nbsp;<?php echo $usu1['Nombre_A']; echo "&nbsp;".$usu1['ApellidoP_A'];
+                         echo "&nbsp;".$usu1['ApellidoM_A']; ?> </h5>
                         <!--Inicia formulario-->
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                             <div class="form">
-                              <input type="hidden" name="id" id="id" value="<?php echo $row['Id_Usuario'];?>">
+                              <input type="hidden" name="id" id="id" value="<?php echo $row['Id_Alumno'];?>">
                           <div class="form-group">
-                            <label for="correo">Cambiar correo electrónico</label>
+                            <label for="correo">Cambiar correo electrónico:</label>
                             <input type="email" name="email" class="form-control" id="correo" value="<?php echo $row['Correo_U'];?>">
                           </div> <br>
                           <div class="form-group">
-                            <label for="pass">Cambiar contraseña</label>
+                            <label for="pass">Cambiar contraseña:</label>
                               <input type="password" name="pass" class="form-control" id="pass" value="<?php echo $row['Password'];?>">
                           </div><br>
                           <div class="form-group">
-                            <label for="user1">Cambiar nombre de usuario</label>
+                            <label for="user1">Cambiar nombre de usuario:</label>
                               <input type="text" name="user1" class="form-control" id="user1" value="<?php echo $row['Usuario'];?>">
                           </div>
                             <input type="submit" name="submit" value="Modificar" class="btn btn-outline-danger">

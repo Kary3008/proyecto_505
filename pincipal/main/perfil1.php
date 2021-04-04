@@ -105,7 +105,7 @@
 <br>
         <h1 class="text-center">Perfil de Usuario</h1>
         <!--Inicia contenido-->
-        <div class="container" style="margin-top: 50px; background: #ccccff" >
+        <div class="container" style="margin-top: 50px; background: #ccccff;" >
         <div class="container">
         	<h4 align= center>Usuario</h4>
         	<div class="card"> <br>
@@ -142,13 +142,11 @@
                         <div class="card-header text-light" style="background: #6666ff;"><span class="icon-cogs"></span>¿Qué desea modificar?</div>
                         <div class="card-body">
                            <h5 class="text-muted text-center">Nombre de Usuario: <?php echo $usu1['Usuario']; ?></h5><hr>
-                           <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar foto de perfil</a>
-                           <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar nombre de usuario</a>
-                           <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar correo electrónico</a>
-                           <a href="#" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar la contraseña</a>
+                           <a href="modificar.php?Id_Alumno=<?php echo $usu1['Id_Alumno']; ?>" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar nombre de usuario</a>
+                           <a href="modificar.php?Id_Alumno=<?php echo $usu1['Id_Alumno']; ?>" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar correo electrónico</a>
+                           <a href="modificar.php?Id_Alumno=<?php echo $usu1['Id_Alumno']; ?>" class="btn btn-outline-dark btn-sm btn-block"><span class="icon-pencil"></span> Cambiar la contraseña</a>
                            <a href="#" class="btn btn-outline-info btn-sm btn-block" onclick="imprimir('perfil');"><span class="icon-print"></span> Imprimir Perfil</a>
                             <hr><br>
-
                       </div>
                     </div>
                 </div>
