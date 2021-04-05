@@ -21,7 +21,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="opciones">
                           <a class="dropdown-item" href="main/perfil1.php"><span class="icon-cog"></span>Perfil</a>
-                          <a class="dropdown-item" href="#">Ayuda</a>
+                          <a class="dropdown-item" href="main/busqueda.php">Búsqueda de datos</a>
                           <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCenter">Cerrar sesión</a>
                         </div>
                       </li>

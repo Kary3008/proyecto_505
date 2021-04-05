@@ -24,7 +24,7 @@ if (!empty($_POST['correo'])){
 
 
 if(!empty($_POST['pass'])){
-	$passw = $_POST['pass'];
+	$passw = (md5($_POST['pass']));
 }else{
 	$errorpass = "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
                                <strong>Falta ingresar el password.</strong> Por favor ingresa con el password con el que te registraste.
@@ -36,22 +36,20 @@ if(!empty($_POST['pass'])){
 
 //verificar que los datos no estan vacios
 if(!empty($email) && !empty($passw)){
-
 //consultar los datos existentes
-	include 'conexion.php';
+	include 'main/conecta.php';
     $consulta = "SELECT * FROM alumnos WHERE Correo_U = '$email' and Password ='$passw'";
-    $ejecutar = mysqli_query($conexion, $consulta);
-
+    $ejecutar = mysqli_query($conecta, $consulta);
 //busqueda de valor de la columna selcionada
-    while ($row=$ejecutar -> fetch_assoc()){
-
-    	$email=$row['usuario'];
+    while ($row=$ejecutar->fetch_array()){
+    	$email=$row['Correo_U'];
     }
 
     if(mysqli_num_rows($ejecutar)>0){
         session_start();
-       $_SESSION['usuario'] = $email;
-       header ("location: pincipal/principal.php");
+      $_SESSION['login'] = TRUE;
+       $_SESSION['Correo_U'] = $email;
+       header ("location: principal.php");
     }else{
 
     	$errorusuar = "<div class='alert alert-danger alert-dismissible fade show shadow-lg p-3 mb-5 bg-white rounded' role='alert'>
@@ -61,7 +59,9 @@ if(!empty($email) && !empty($passw)){
                                    </button>
                                  </div>";
     }
- }
   }
-
+}
  ?>
+ <?php echo $erroremail; ?>
+ <?php echo $errorpass; ?>
+ <?php echo $errorusuar; ?><br>

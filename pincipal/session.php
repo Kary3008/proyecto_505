@@ -1,10 +1,5 @@
-<?php
-//se incluye la base de datos
-include 'main/conecta.php';
-
-?>
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <!-- meta tipos de caracteres especiales en la web -->
     <meta charset="utf-8">
@@ -31,7 +26,7 @@ include 'main/conecta.php';
     <!--Inicia contenido-->
     <div class="container" style="margin-top: 80px; background: #99ccff" >
     <div class="container">
-      <h3 class="text-center py-4">Iniciar sesión</h3>
+      <h3 class="text-center py-2">Iniciar sesión</h3>
       <div class="card">
           <h4 class="text-center text-muted py-4">Bienvenido, por favor ingresa tu usuario y contraseña</h4>
         <!--Inicia formulario-->

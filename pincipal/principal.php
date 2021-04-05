@@ -4,6 +4,8 @@ $usuario = $_SESSION['Usuario'];
 if (!isset($usuario)) {
  header("location:session.php");
 }
+//cerrar la BD
+$conecta->close();
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">

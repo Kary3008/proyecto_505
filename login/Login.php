@@ -17,11 +17,11 @@
   </head>
   <body >
     <!--comienza el apartado del login-->
-     <div class="container" style="margin-top: 80px; background: #e6e6fa" >
-          <h3 class="text-center py-4"> Inicio de Sesión</h3>
+     <div class="container" style="margin-top: 80px; background: #99ccff" >
+          <h3 class="text-center py-3"> Inicio de Sesión</h3>
           <!--comienza el apartado de los campos-->
           <div class="card" style="background: #73c2fb">
-                   <h4 align="center"> Bienvenido, por favor ingresa tu Usuario y Password</h4><hr>
+                   <h4 align="center"> Bienvenido, por favor ingresa tu Usuario y Contraseña</h4><hr>
                <div class="container">
                  <form class="form-group" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
                         <input type="text" class="form-control" name="correo" placeholder="Usuario" value="<?php if (isset($correo)) echo $correo; ?>">
