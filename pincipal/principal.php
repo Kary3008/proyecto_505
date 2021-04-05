@@ -56,8 +56,7 @@ $conecta->close();
       <?php include 'main/navbar.php' ?>
       <!--Inicia contenido-->
        <div class="container py-5">
-         <?php include 'main/contenido.php' ?>
-         <h4 class="text-center py-3">Módulos Interactivos</h4>
+         <h4 class="text-center">Módulos Interactivos</h4>
           <div class="container py-3">
             <div class="row" data-aos="fade-down">
           <!-- inicia nuestra tarjeta de sevicios -->
@@ -101,6 +100,7 @@ $conecta->close();
       </div>
   <!-- termina seccion modulos-->
        </div>
+       <?php include 'main/contenido.php' ?>
        <!--Termina contenido-->
       </div>
     <!--Termina Navbar y sidebar-->

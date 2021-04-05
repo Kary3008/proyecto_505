@@ -46,27 +46,35 @@ $usuario = $_SESSION['Usuario'];
   </li>
     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/tres.jpg" class="d-block w-100" alt="...">
+      <img src="img/img3.png" class="d-block w-100" alt="0" style="width:100%; height: 500px;">
       <div class="carousel-caption d-none d-md-block">
           <h2 class="text-center slider">¡BIENVENID@ AL RECORRIDO VIRTUAL!</h2>
-            <p>"CONOCE TU INSTITUCIÓN"</p>
+            <p>"Conoce tu institución"</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/tres.jpg" class="d-block w-100" alt="...">
+      <img src="../pincipal/img/map3.jpeg" class="d-block w-100" alt="1" style="width:100%; height: 500px;">
       <div class="carousel-caption d-none d-md-block">
         <h2 class="text-center slider">¡BIENVENID@ AL RECORRIDO VIRTUAL!</h2>
-          <p>"CONOCE TU INSTITUCIÓN"</p>
+          <p>"Conoce más acerca de nosotros"</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/tres.jpg" class="d-block w-100" alt="...">
+      <img src="../pincipal/img/map4.jpeg" class="d-block w-100" alt="2" style="width:100%; height: 500px;">
       <div class="carousel-caption d-none d-md-block">
         <h2 class="text-center slider">¡BIENVENID@ AL RECORRIDO VIRTUAL!</h2>
-          <p>"CONOCE TU INSTITUCIÓN"</p>
+          <p>"Registrate"</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="../pincipal/img/map1.jpeg" class="d-block w-100" alt="2" style="width:100%; height: 500px;">
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="text-center slider">¡BIENVENID@ AL RECORRIDO VIRTUAL!</h2>
+          <p>"Recorre más lugares virtualmente"</p>
       </div>
     </div>
   </div>

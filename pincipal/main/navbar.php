@@ -6,10 +6,10 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" style="color: #ddd" href="project.php">Inicio <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" style="color: #ddd" href="#"><span class="icon-home"></span>Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" style="color: #ddd" href="#">Productos</a>
+                      <a class="nav-link" style="color: #ddd" href="project.php"><span class="icon-users"></span>¿Quiénes somos?</a>
                     </li>
                     <li class="nav-item active" style="list-style: none">
                       <a class="nav-link disabled" style="color: #ddd"  href="#" tabindex="-1" aria-disabled="true">Bienvenid@: <?php echo $usuario; ?></a>
@@ -21,8 +21,8 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="opciones">
                           <a class="dropdown-item" href="main/perfil1.php"><span class="icon-cog"></span>Perfil</a>
-                          <a class="dropdown-item" href="main/busqueda.php">Búsqueda de datos</a>
-                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCenter">Cerrar sesión</a>
+                          <a class="dropdown-item" href="main/busqueda.php"><span class="icon-search"></span>Búsqueda</a>
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCenter"><span class="icon-moon"></span>Cerrar sesión</a>
                         </div>
                       </li>
                     <!--Termina lista despegable-->

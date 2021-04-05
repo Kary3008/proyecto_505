@@ -10,11 +10,13 @@ $where = ""; //esperar un dato
 if (!empty($_POST)) { //no puede estar vacío
   $valor = $_POST['buscar']; //en caso de no estar vacío busca la letra
   if (!empty($valor)) { //si tiene un valor
-    $where = "WHERE Nombre_A LIKE '%%$valor'"; // where va a buscar cualquiera que contenga el caracter
+    $where = "WHERE Nombre_A LIKE '%$valor%'"; // where va a buscar cualquiera que contenga el caracter
   }
 }
+//consulta para extraer datos de la BD
 $consulta = "SELECT * FROM alumnos $where"; //va a ser una busca siempre y cuando no esté vacío
 $resultado = $conecta->query($consulta);
+$numero = $resultado->num_rows;
 //cerrar la BD
 $conecta->close();
 ?>
@@ -54,8 +56,22 @@ $conecta->close();
         <h4 class="text-center">Búsqueda</h4>
         <div class="col">
           <form class="" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-            <input type="text" name="buscar" class="form-control" placeholder="Búsqueda por nombre"><br>
-            <input type="submit" name="buscando" value="Buscar" class="btn-block btn-sm btn-info">
+            <div class="card w-100">
+              <div class="card-body">
+                <div class="container">
+                  <div>
+                    <div class="row">
+                      <div class="col">
+                        <input type="text" name="buscar" class="form-control" placeholder="Búsqueda por nombre"><br>
+                      </div>
+                      <div class="col">
+                        <input type="submit" name="buscando" value="Buscar" class="btn btn-info">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </form>
           <div class="col py-3">
             <?php if($resultado->num_rows > 0) {?>

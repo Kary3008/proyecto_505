@@ -1,4 +1,5 @@
 <!--Inicia Navbar-->
+<link rel="stylesheet" type="text/css" href="../pincipal/css/fontello.css">
     <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(to left, #333333 ,#9933ff, #66ccff )">
       <a href="#"><img src="../img1.png" alt="LogoE" style="width: 90px; height: 70px;"></a>
 
@@ -26,8 +27,8 @@
                       </a>
                       <div class="dropdown-menu" aria-labelledby="opciones">
                         <a class="dropdown-item" href="../pincipal/main/perfil1.php"><span class="icon-cog"></span>Perfil</a>
-                        <a class="dropdown-item" href="#">Ayuda</a>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCenter">Cerrar sesión</a>
+                        <a class="dropdown-item" href="../pincipal/main/busqueda.php"><span class="icon-search"></span>Búsqueda</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ModalCenter"><span class="icon-moon"></span>Cerrar sesión</a>
                       </div>
                     </li>
                   <!--Termina lista despegable-->
